@@ -1,0 +1,199 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        #btn{
+            position:relative;
+            height:15vh;
+            width:100%;
+            top:85vh;
+            font-size: 2em;
+            text-transform: capitalize;
+            color:white;
+            background:black;
+            animation:color 2s infinite linear;
+        }
+        @keyframes color{
+            0%{
+               color:red;
+            }
+            20%{
+               color:forestgreen;
+            }
+            40%{
+               color:goldenrod;
+            }
+            60%{
+               color:purple;
+            }
+            80%{
+               color:cadetblue;
+            }
+        }
+        
+       .he{
+            position:absolute;
+            height:85vh;
+            width:100%;
+            padding:3% 5%;
+            box-sizing: border-box;
+        }
+        .he h1{
+            color:white;
+            font-size: 3.5em;
+            font-family:Arial, Helvetica, sans-serif;
+            text-shadow:2px 2px 5px black;
+            animation:color1 2s infinite linear;
+        }
+        @keyframes color1{
+            0%{
+                letter-spacing: 1px;
+            }
+            50%{
+               letter-spacing: 2px;
+            }
+            100%{
+               letter-spacing: 3px;
+            }
+        }
+        .he p{
+            color:black;
+            font-size: 2em;
+            font-family:Arial, Helvetica, sans-serif;
+            padding:.5% 0;
+            animation:color2 2s infinite;
+        }
+        @keyframes color2{
+            0%{
+                border-bottom: 2px dotted white;
+            }
+            100%{
+                border-bottom:2px dashed white;
+            }
+        }
+        .he1{
+            background-image:linear-gradient(to top left, rgb(241, 21, 21), rgb(240, 157, 3));
+        }
+        .he2{
+            background-image:linear-gradient(to bottom right, rgb(133, 5, 133), rgb(240, 205, 6));
+        }
+        .he3{
+            background-image:linear-gradient(to bottom right, rgb(26, 88, 80), rgb(175, 136, 30));
+        }
+        .he4{
+            background-image:linear-gradient(to top left, rgb(189, 121, 53), rgb(165, 110, 110));
+        }
+        .he5{
+            background-image:linear-gradient(to top left, rgb(53, 51, 51), rgb(57, 182, 57));
+        }
+        .he6{
+           background-image:linear-gradient(to top left,rgb(80, 133, 134), rgb(38, 131, 78));
+        }
+        .styling{
+            z-index:1;
+           animation:style 1s linear forwards;
+        }
+        @keyframes style{
+0%{
+    transform:scale(.8);
+
+}
+100%{
+    transform:scale(1);
+}
+        }
+    </style>
+</head>
+<body>
+  <div class="he he1">
+<h1>Goals</h1>
+<p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+  </div> 
+  <div class="he he2">
+    <h1>Achievements</h1>
+    <p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+  </div>
+  <div class="he he3">
+<h1>Searching</h1>
+<p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+</div>
+<div class="he he4">
+<h1>Panding</h1>
+<p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+</div>
+<div class="he he5">
+<h1>Precotions</h1>
+<p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+</div>
+<div class="he he6">
+<h1>Targets</h1>
+<p>1-</p>
+<p>2-</p>
+<p>3-</p>
+<p>4-</p>
+<p>5-</p>
+</div>
+  <button id="btn" onclick="myfunction()">let's start</button>
+</body>
+<script>
+    var i=1;
+    function myfunction(){
+        if(i==1){
+document.getElementById("btn").innerHTML="1st stage"
+document.getElementsByClassName("he")[0].classList.add("styling")
+i=2;
+    }
+    else if(i==2){
+document.getElementById("btn").innerHTML="2nd stage"
+document.getElementsByClassName("he")[1].classList.add("styling")
+i=3;  
+    }
+    else if(i==3){
+document.getElementById("btn").innerHTML="3rd stage"
+document.getElementsByClassName("he")[2].classList.add("styling")
+i=4;  
+    }
+    else if(i==4){
+document.getElementById("btn").innerHTML="4th stage"
+document.getElementsByClassName("he")[3].classList.add("styling")
+i=5;  
+    } 
+    else if(i==5){
+document.getElementById("btn").innerHTML="5th stage"   
+document.getElementsByClassName("he")[4].classList.add("styling")
+i=6;
+    }
+    else if(i==6){
+document.querySelectorAll(".he").forEach(he =>he.classList.remove("styling") );
+i=1;
+
+    }
+    }
+    
+</script>
+</html>
